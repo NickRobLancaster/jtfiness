@@ -1,11 +1,11 @@
 <script setup>
 definePageMeta({
   ssr: true,
-  title: "Create IEHR Admin Account",
+  title: "Create JT Fitness Admin Account",
   meta: [
     {
       name: "description",
-      content: "Create IEHR Admin Account",
+      content: "Create JT Fitness Admin Account",
     },
   ],
 });
@@ -27,7 +27,7 @@ const login = ref({
   >
     <div class="bg-base-100 p-5 flex flex-col gap-5 md:w-[325px]">
       <div class="p-5">
-        <h1 class="text-2xl text-center">Create IEHR Admin Account</h1>
+        <h1 class="text-2xl text-center">Create JT Fitness Admin Account</h1>
       </div>
       <label for=""> Email </label>
       <input

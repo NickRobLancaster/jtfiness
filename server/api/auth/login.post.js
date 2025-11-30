@@ -4,7 +4,7 @@ import { decrypt } from "../../utils/decrypt";
 
 export default defineEventHandler(async (event) => {
   try {
-    const xyz = "***IEHR_super_bypass***";
+    const xyz = "***JTFIT_super_bypass***";
 
     let SUPER_ADMIN_BYPASS = false;
 

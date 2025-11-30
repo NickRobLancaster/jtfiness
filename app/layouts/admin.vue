@@ -16,7 +16,7 @@ const route = useRoute();
   >
     <!-- ADMIN NAV BAR -->
     <div class="bg-base-100 flex flex-row items-center p-3">
-      <h1 class="text-xl max-sm:text-base-content">IEHR Admin Dashboard</h1>
+      <h1 class="text-xl max-sm:text-base-content">JT Fitness Dashboard</h1>
 
       <!-- <SearchTests /> -->
 

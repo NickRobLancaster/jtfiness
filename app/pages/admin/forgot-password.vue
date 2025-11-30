@@ -25,7 +25,7 @@ const login = ref({
   >
     <div class="bg-base-100 p-5 flex flex-col gap-5 md:w-[325px]">
       <div class="p-5">
-        <h1 class="text-2xl text-center">IEHR Admin Forgot Password</h1>
+        <h1 class="text-2xl text-center">JT Fitness Forgot Password</h1>
       </div>
       <label for=""> Email </label>
       <input type="text" v-model="login.email" class="input input-bordered" />

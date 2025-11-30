@@ -4,8 +4,8 @@ definePageMeta({
   title: "Administrator Sign In",
   meta: [
     {
-      name: "IEHR Admin Login",
-      content: "IEHR Admin Login",
+      name: "JT Fitness Admin Login",
+      content: "JT Fitness Admin Login",
     },
   ],
 });
@@ -85,7 +85,7 @@ const submitLogin = async () => {
       >
         <template #default="{ state }">
           <div class="p-5">
-            <h1 class="text-2xl text-center">IEHR Admin Login</h1>
+            <h1 class="text-2xl text-center">JT Fitness Admin Login</h1>
           </div>
           <!-- Username Field -->
           <FormKit

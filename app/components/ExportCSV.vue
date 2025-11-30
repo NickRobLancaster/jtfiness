@@ -12,7 +12,7 @@ const props = defineProps({
   },
 });
 
-const filename = `IEHR_${props.dataset.replaceAll(" ", "_")}_${Date.now()}.csv`;
+const filename = `JTFitness_${props.dataset.replaceAll(" ", "_")}_${Date.now()}.csv`;
 
 const isExporting = ref(false);
 

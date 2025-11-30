@@ -31,7 +31,7 @@ const UserSchema = new mongoose.Schema(
       type: String,
     },
     /*
-    super = IEHR - create, read, update, delete
+    super = JTFIT - create, read, update, delete
     admin = (Dr Conley) - create, read, update
     user = - read, update
     */
