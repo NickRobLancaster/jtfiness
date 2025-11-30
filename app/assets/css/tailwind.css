@@ -1,0 +1,8 @@
+/* assets/css/tailwind.css */
+@import "tailwindcss";
+@plugin "daisyui";
+
+html,
+body {
+  overflow-x: hidden;
+}

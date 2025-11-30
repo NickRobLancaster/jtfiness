@@ -1,0 +1,11 @@
+/* assets/css/tailwind.css */
+@import "tailwindcss";
+@plugin "daisyui" {
+  /* list only the themes you want available; mark defaults with flags */
+  themes: all;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}

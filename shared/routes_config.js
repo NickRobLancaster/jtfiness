@@ -1,0 +1,31 @@
+export const api_public_routes = [
+  // "/api",
+  "/api/auth/login",
+  "/api/auth/status",
+  "/api/auth/validate-session",
+  "/api/drug-tests/results",
+  "/api/drug-tests/list-public",
+  "/api/drug-tests/kit-requests/create",
+  "/api/drugs/list-public",
+  "/api/drugs/list-public-search",
+  "/api/drugs/picklist",
+  "/api/cms",
+];
+
+export const page_public_routes = [
+  // "",
+  // "/",
+  // "/admin",
+  "/about-us",
+  "/about-this-program",
+  "/careers",
+  "/request-kits",
+  "/check-results",
+  "/contact",
+  "/learn-more",
+  "/privacy",
+  "/terms",
+  "/results",
+  "/substance-catelog",
+  "/component-playground",
+];
