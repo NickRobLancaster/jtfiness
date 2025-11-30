@@ -6,31 +6,42 @@
         <nuxt-link to="/" class="link link-hover"> JT Fitness </nuxt-link>
       </aside>
       <nav>
-        <h6 class="footer-title">Services</h6>
+        <h6 class="footer-title">Company</h6>
+        <!-- home -->
+        <nuxt-link to="/" class="link link-hover"> Home </nuxt-link>
+        <!-- work with us -->
+
+        <nuxt-link to="/jt-method" class="link link-hover"
+          >The JT Method</nuxt-link
+        >
+        <nuxt-link to="/work-with-us" class="link link-hover"
+          >Work With Us</nuxt-link
+        >
 
         <nuxt-link to="/request-session" class="link link-hover">
           Request Session
         </nuxt-link>
-        <nuxt-link to="/about-this-program" class="link link-hover"
-          >About This Program</nuxt-link
+
+        <!-- results -->
+        <nuxt-link to="/results" class="link link-hover"> Results </nuxt-link>
+
+        <!-- free guides -->
+        <nuxt-link to="/free-guides" class="link link-hover"
+          >Free Guides</nuxt-link
         >
-      </nav>
-      <nav>
-        <h6 class="footer-title">Company</h6>
-        <nuxt-link to="/about-us" class="link link-hover"> About Us </nuxt-link>
-        <nuxt-link to="/contact" class="link link-hover"> Contact </nuxt-link>
-        <!-- <nuxt-link to="/about-us" class="link link-hover">
-          Careers
-        </nuxt-link> -->
-      </nav>
-      <nav>
-        <h6 class="footer-title">Legal</h6>
-        <nuxt-link to="/privacy" class="link link-hover">
-          Privacy Policy
-        </nuxt-link>
+
+        <!-- services -->
+        <nuxt-link to="/services" class="link link-hover"> Services </nuxt-link>
+
+        <h6 class="footer-title mt-5">Policies</h6>
         <nuxt-link to="/terms" class="link link-hover">
           Terms of Service
         </nuxt-link>
+
+        <nuxt-link to="/privacy" class="link link-hover">
+          Privacy Policy
+        </nuxt-link>
+        <nuxt-link to="/cookies" class="link link-hover"> Cookies </nuxt-link>
         <!-- <nuxt-link to="/cookie-policy" class="link link-hover"
           >Cookie Policy</nuxt-link
         > -->

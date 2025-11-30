@@ -1,762 +1,553 @@
-<script setup>
-// import the useWebsiteStore pinia store
-import { useWebsiteStore } from "../stores/websiteStore";
-
-definePageMeta({
-  ssr: true,
-  //title
-  title: "JT Fitness",
-  //meta tags
-  meta: [
-    {
-      name: "description",
-      content: "JT Fitness",
-    },
-  ],
-});
-
-const router = useRouter();
-
-//defineRouteRules({
-//  prerender: true,
-//});
-
-const websiteStore = useWebsiteStore();
-
-const newsletter_email = ref("");
-const newsletter_submitted = ref(false);
-
-const handle_newsletter_submit = () => {
-  // placeholder logic – wire to your API or email service
-  if (newsletter_email.value.trim()) {
-    newsletter_submitted.value = true;
-    setTimeout(() => {
-      newsletter_submitted.value = false;
-    }, 4000);
-  }
-};
-</script>
-
 <template>
   <div class="min-h-screen bg-base-100 text-base-content flex flex-col">
-    <!-- main content -->
-    <main class="flex-1">
-      <!-- hero -->
-      <section class="overflow-hidden border-b border-base-200">
-        <div
-          class="max-w-6xl mx-auto px-4 py-12 md:py-20 grid md:grid-cols-2 gap-10 items-center"
-        >
-          <div class="space-y-6">
-            <p
-              class="text-xs tracking-[0.3em] uppercase text-primary font-semibold"
-            >
-              JT FITNESS • ONLINE COACHING
-            </p>
-            <h1
-              class="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight"
-            >
-              It starts with a choice.
-            </h1>
-            <p class="text-base md:text-lg text-base-content/80">
-              JT Fitness helps you trade excuses for action, build discipline,
-              and create a life that feels as strong as it looks.
-            </p>
-            <p class="text-sm md:text-base text-base-content/70">
-              If you want change, you commit to change. We give you the plan,
-              coaching, and community. You bring the decision.
-            </p>
-
-            <div class="flex flex-col sm:flex-row gap-3 pt-2">
-              <a href="#consult" class="btn btn-primary w-full sm:w-auto">
-                Book A Coaching Consult
-              </a>
-              <a href="#about" class="btn btn-outline w-full sm:w-auto">
-                Meet JT
-              </a>
-            </div>
-          </div>
-
-          <!-- hero image placeholder -->
-          <div class="relative">
-            <div
-              class="aspect-[4/5] w-full max-w-sm mx-auto rounded-3xl bg-gradient-to-br from-primary/20 via-base-200 to-secondary/20 border border-base-300 shadow-xl flex items-end p-6"
-            >
-              <div>
-                <p
-                  class="text-xs uppercase tracking-[0.25em] text-base-content/70"
-                >
-                  Coach
-                </p>
-                <p class="text-2xl font-bold">JT</p>
-                <p class="text-sm text-base-content/70 mt-1">
-                  Strength • Discipline • Recovery • Lifestyle
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- community / partners teaser -->
-      <section id="partners" class="border-b border-base-200 bg-base-200/40">
-        <div
-          class="max-w-6xl mx-auto px-4 py-12 md:py-16 grid md:grid-cols-2 gap-10 items-center"
-        >
-          <div class="space-y-4">
-            <h2 class="text-2xl md:text-3xl font-bold">We train as a team.</h2>
-            <p class="text-base text-base-content/80">
-              JT Fitness is built on community. You are surrounded by people who
-              are serious about growth in and out of the gym.
-            </p>
-            <p class="text-sm text-base-content/70">
-              We work with partners we trust, tools we actually use, and brands
-              that fuel the lifestyle we coach.
-            </p>
-            <a
-              href="#partners_list"
-              class="btn btn-secondary btn-sm mt-2 w-full sm:w-auto"
-            >
-              Save With Partner Codes
-            </a>
-          </div>
-
-          <!-- partner logo grid placeholder -->
-          <div
-            class="grid grid-cols-2 sm:grid-cols-3 gap-3 text-xs uppercase tracking-wide"
-          >
-            <div class="card bg-base-100 border border-base-300">
-              <div class="card-body py-4 px-4">
-                <p class="font-semibold">PrimeFuel</p>
-                <p class="text-[11px] text-base-content/70">
-                  Supplements JT trusts.
-                </p>
-              </div>
-            </div>
-            <div class="card bg-base-100 border border-base-300">
-              <div class="card-body py-4 px-4">
-                <p class="font-semibold">Elevate Labs</p>
-                <p class="text-[11px] text-base-content/70">
-                  Performance blood work.
-                </p>
-              </div>
-            </div>
-            <div class="card bg-base-100 border border-base-300">
-              <div class="card-body py-4 px-4">
-                <p class="font-semibold">ColdCore</p>
-                <p class="text-[11px] text-base-content/70">
-                  Cold plunge recovery.
-                </p>
-              </div>
-            </div>
-            <div class="card bg-base-100 border border-base-300">
-              <div class="card-body py-4 px-4">
-                <p class="font-semibold">HeartStrong</p>
-                <p class="text-[11px] text-base-content/70">
-                  Cardio & endurance.
-                </p>
-              </div>
-            </div>
-            <div class="card bg-base-100 border border-base-300">
-              <div class="card-body py-4 px-4">
-                <p class="font-semibold">Origin Whey</p>
-                <p class="text-[11px] text-base-content/70">
-                  Clean protein sources.
-                </p>
-              </div>
-            </div>
-            <div class="card bg-base-100 border border-base-300">
-              <div class="card-body py-4 px-4">
-                <p class="font-semibold">EveryBody Fuel</p>
-                <p class="text-[11px] text-base-content/70">
-                  Everyday essentials.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- anchor for "partners_list" used above -->
-        <div id="partners_list"></div>
-      </section>
-
-      <!-- email subscribe block (mirrors home-page newsletter CTA) -->
-      <section
-        class="border-b border-base-200 bg-base-100"
-        id="join_newsletter"
+    <!-- hero full-screen image -->
+    <section
+      class="min-h-screen w-full bg-cover bg-center bg-no-repeat flex items-center"
+      :style="{ backgroundImage: `url('${hero_image_url}')` }"
+    >
+      <div
+        class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 backdrop-blur-sm bg-black/50"
       >
-        <div
-          class="max-w-3xl mx-auto px-4 py-12 md:py-16 text-center space-y-6"
-        >
-          <h2
-            class="text-sm tracking-[0.3em] uppercase text-primary font-semibold"
+        <div class="flex flex-col justify-center py-20">
+          <p
+            class="uppercase tracking-[0.25em] text-[0.65rem] md:text-xs text-primary/80 font-semibold mb-4"
           >
-            Subscribe Now
-          </h2>
-          <p class="text-2xl md:text-3xl font-bold">
-            Sign up for JT Fitness emails
-          </p>
-          <p class="text-sm md:text-base text-base-content/70">
-            Weekly training thoughts, mindset prompts, and updates from the JT
-            Fitness team.
+            taught not told • coaching
           </p>
 
-          <form
-            class="max-w-md mx-auto flex flex-col sm:flex-row gap-3 mt-4"
-            @submit.prevent="handle_newsletter_submit"
+          <h1
+            class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight md:leading-[1.1] max-w-2xl"
           >
-            <label class="form-control w-full sm:flex-1">
-              <span class="label">
-                <span class="label-text text-xs uppercase tracking-wide">
-                  Email Address
-                </span>
-              </span>
-              <input
-                v-model="newsletter_email"
-                type="email"
-                required
-                placeholder="you@example.com"
-                class="input input-bordered w-full"
-              />
-            </label>
-            <button
-              type="submit"
-              class="btn btn-primary w-full sm:w-auto mt-1 sm:mt-7"
-            >
-              Sign Up
-            </button>
-          </form>
+            Stop guessing.
+            <br />
+            <span class="text-primary">Train</span>
+            with a plan.
+          </h1>
 
-          <p v-if="newsletter_submitted" class="text-xs text-success mt-2">
-            Thank you for subscribing to JT Fitness.
+          <p
+            class="mt-4 md:mt-5 text-sm sm:text-base md:text-lg text-base-content/80 max-w-xl"
+          >
+            We help busy people lose fat, build muscle, and gain confidence
+            through education-based coaching — so you finally understand what
+            works for your body.
           </p>
-        </div>
-      </section>
 
-      <!-- about + sobriety / commitment theme -->
-      <section id="about" class="border-b border-base-200 bg-base-200/40">
-        <div
-          class="max-w-6xl mx-auto px-4 py-12 md:py-16 grid md:grid-cols-2 gap-10 items-start"
-        >
-          <div class="space-y-4">
-            <h2
-              class="text-sm tracking-[0.3em] uppercase text-primary font-semibold"
+          <div class="mt-6 flex flex-wrap gap-3">
+            <NuxtLink
+              to="/waitlist"
+              class="btn btn-primary rounded-full px-5 md:px-7 text-sm md:text-base font-semibold"
             >
-              About JT
-            </h2>
-            <h3 class="text-2xl md:text-3xl font-bold">
-              Fitness and sobriety built the coach JT is today.
-            </h3>
-            <p class="text-base text-base-content/80">
-              JT knows what it feels like to start over. To rebuild your body,
-              your habits, and your circle. That is the lens every program is
-              built from.
-            </p>
-            <p class="text-sm text-base-content/70">
-              Coach, husband, father, and athlete — JT uses his own story to
-              show what is possible when you remove the things that hold you
-              back and replace them with what makes you stronger.
-            </p>
-            <div
-              class="flex flex-wrap gap-2 text-xs uppercase tracking-wide mt-3"
+              Join the coaching waitlist
+            </NuxtLink>
+
+            <NuxtLink
+              to="/method"
+              class="btn btn-ghost border border-base-300 rounded-full px-5 md:px-7 text-sm md:text-base"
             >
-              <span class="badge badge-outline">Coach</span>
-              <span class="badge badge-outline">Mentor</span>
-              <span class="badge badge-outline">Athlete</span>
-              <span class="badge badge-outline">Sober Lifestyle</span>
-            </div>
-            <a
-              href="#media"
-              class="btn btn-outline btn-sm mt-4 w-full sm:w-auto"
-            >
-              Hear More From JT
-            </a>
+              See the coaching method
+            </NuxtLink>
           </div>
 
-          <!-- stacked images / cards placeholder -->
-          <div class="grid grid-cols-2 gap-4">
+          <div class="mt-6 grid grid-cols-2 gap-4 max-w-sm text-xs sm:text-sm">
             <div
-              class="col-span-2 aspect-[16/9] rounded-2xl bg-gradient-to-r from-primary/20 via-base-200 to-secondary/20 border border-base-300 flex items-center justify-center text-sm text-base-content/70"
+              class="stat bg-base-200/60 rounded-2xl border border-base-300/60 p-4"
             >
-              Training day snapshots
-            </div>
-            <div
-              class="aspect-square rounded-2xl bg-base-100 border border-base-300 flex items-center justify-center text-xs text-base-content/70"
-            >
-              Before / After
-            </div>
-            <div
-              class="aspect-square rounded-2xl bg-base-100 border border-base-300 flex items-center justify-center text-xs text-base-content/70"
-            >
-              Community events
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- join section (mirroring "Join the team") -->
-      <section id="join" class="border-b border-base-200 bg-base-100">
-        <div class="max-w-6xl mx-auto px-4 py-12 md:py-16">
-          <div class="grid lg:grid-cols-[1.1fr,0.9fr] gap-10 items-start">
-            <div class="space-y-4">
-              <h2
-                class="text-sm tracking-[0.3em] uppercase text-primary font-semibold"
-              >
-                Join The JT Fitness Team
-              </h2>
-              <p class="text-2xl md:text-3xl font-bold">
-                Become the strongest version of you.
-              </p>
-              <p class="text-base text-base-content/80">
-                Hundreds of athletes have committed to JT Fitness coaching to
-                take control of their health, mindset, and life.
-              </p>
-              <p class="text-sm text-base-content/70">
-                This is more than a workout plan. It is structure, support, and
-                accountability designed to help you become who you keep saying
-                you want to be.
-              </p>
-
-              <div class="grid sm:grid-cols-2 gap-4 pt-4">
-                <div class="space-y-2">
-                  <p class="font-semibold text-sm">Custom Workout Programs</p>
-                  <p class="text-xs text-base-content/70">
-                    Training plans tailored to your goals, schedule, and
-                    equipment with video guidance for every movement.
-                  </p>
-                </div>
-                <div class="space-y-2">
-                  <p class="font-semibold text-sm">Personalized Nutrition</p>
-                  <p class="text-xs text-base-content/70">
-                    Macros and meal structure built for your lifestyle, not
-                    against it.
-                  </p>
-                </div>
-                <div class="space-y-2">
-                  <p class="font-semibold text-sm">Live Coaching Calls</p>
-                  <p class="text-xs text-base-content/70">
-                    Weekly Zoom calls focused on progress, mindset, discipline,
-                    recovery, and service.
-                  </p>
-                </div>
-                <div class="space-y-2">
-                  <p class="font-semibold text-sm">Team Community</p>
-                  <p class="text-xs text-base-content/70">
-                    Group chat, events, and team workouts — because growth is
-                    easier when you are not doing it alone.
-                  </p>
-                </div>
-              </div>
-
-              <div class="flex flex-col sm:flex-row gap-3 pt-6">
-                <a href="#consult" class="btn btn-primary w-full sm:w-auto">
-                  Click Here To Book Your Call
-                </a>
-                <a href="#challenge" class="btn btn-outline w-full sm:w-auto">
-                  Join The JT Challenge
-                </a>
-              </div>
-            </div>
-
-            <!-- membership tiers -->
-            <div class="space-y-4">
-              <!-- elite 1:1 -->
-              <div class="card bg-base-200 border border-base-300">
-                <div class="card-body gap-2">
-                  <p
-                    class="text-xs uppercase tracking-[0.25em] text-primary font-semibold"
-                  >
-                    Elite 1:1
-                  </p>
-                  <p class="text-lg font-bold">Coaching & Mentorship</p>
-                  <p class="text-xs text-base-content/70">
-                    Built for those ready to go all in. Direct access to JT,
-                    custom programming, and full accountability.
-                  </p>
-                  <p class="text-xs text-base-content/70">
-                    Commitment options: 1 month • 6 months • 12 months Pricing
-                    discussed on your consult call.
-                  </p>
-                  <a href="#consult" class="btn btn-sm btn-primary mt-2 w-full">
-                    Book Elite Consult
-                  </a>
-                </div>
-              </div>
-
-              <!-- premium -->
-              <div class="card bg-base-100 border border-base-300">
-                <div class="card-body gap-2">
-                  <p
-                    class="text-xs uppercase tracking-[0.25em] text-secondary font-semibold"
-                  >
-                    Premium Subscription
-                  </p>
-                  <p class="text-lg font-bold">$99 / month</p>
-                  <ul class="text-xs text-base-content/70 space-y-1">
-                    <li>Weekly team Zoom calls</li>
-                    <li>Team chat and support</li>
-                    <li>Program and event access</li>
-                  </ul>
-                  <a
-                    href="#contact"
-                    class="btn btn-sm btn-secondary mt-2 w-full"
-                  >
-                    Click Here For Premium
-                  </a>
-                </div>
-              </div>
-
-              <!-- basic -->
               <div
-                class="card bg-base-100 border border-dashed border-base-300"
+                class="stat-title text-[0.7rem] sm:text-xs text-base-content/60"
               >
-                <div class="card-body gap-2">
-                  <p
-                    class="text-xs uppercase tracking-[0.25em] text-base-content/70 font-semibold"
-                  >
-                    Basic Subscription
+                Clients coached
+              </div>
+              <div class="stat-value text-lg sm:text-2xl font-extrabold">
+                300+
+              </div>
+              <div
+                class="stat-desc text-[0.7rem] sm:text-xs text-base-content/60"
+              >
+                Online and in-person transformations
+              </div>
+            </div>
+
+            <div
+              class="stat bg-base-200/60 rounded-2xl border border-base-300/60 p-4"
+            >
+              <div
+                class="stat-title text-[0.7rem] sm:text-xs text-base-content/60"
+              >
+                Average program length
+              </div>
+              <div class="stat-value text-lg sm:text-2xl font-extrabold">
+                12–24 wks
+              </div>
+              <div
+                class="stat-desc text-[0.7rem] sm:text-xs text-base-content/60"
+              >
+                Enough time to build real habits
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <main class="flex-1">
+      <!-- mission -->
+      <section class="bg-base-200/40 border-y border-base-300">
+        <div
+          class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-14 lg:py-16 grid md:grid-cols-2 gap-10 md:gap-16 items-center"
+        >
+          <div>
+            <p
+              class="text-xs uppercase tracking-[0.25em] text-primary font-semibold mb-2"
+            >
+              mission
+            </p>
+            <h2 class="text-2xl md:text-3xl font-bold tracking-tight">
+              Coaching that teaches you how to coach yourself.
+            </h2>
+            <p class="mt-4 text-sm sm:text-base text-base-content/80">
+              You do not need another random workout plan. You need structure,
+              feedback, and clear explanations so you understand exactly what to
+              do – and why it works – in the gym and the kitchen.
+            </p>
+            <p class="mt-3 text-sm sm:text-base text-base-content/70">
+              We blend training, nutrition, and accountability so that you can
+              finally build a lifestyle that supports your goals instead of
+              fighting against them.
+            </p>
+            <ul
+              class="mt-5 space-y-2 text-sm sm:text-base text-base-content/80"
+            >
+              <li class="flex items-start gap-2">
+                <span
+                  class="mt-1 mdi mdi-check-circle-outline text-primary"
+                ></span>
+                <span
+                  >Education-first coaching instead of generic templates.</span
+                >
+              </li>
+              <li class="flex items-start gap-2">
+                <span
+                  class="mt-1 mdi mdi-check-circle-outline text-primary"
+                ></span>
+                <span>Honest check-ins, clear adjustments, and no fluff.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span
+                  class="mt-1 mdi mdi-check-circle-outline text-primary"
+                ></span>
+                <span>Tools you can keep using long after coaching ends.</span>
+              </li>
+            </ul>
+          </div>
+
+          <div
+            class="rounded-3xl border border-base-300/70 bg-base-300/50 p-5 sm:p-6 md:p-8 flex flex-col gap-4"
+          >
+            <h3 class="text-lg sm:text-xl font-semibold">
+              Inside Taught Not Told Coaching
+            </h3>
+            <div class="grid sm:grid-cols-2 gap-4 text-xs sm:text-sm">
+              <div class="card bg-base-100/70 border border-base-300/70">
+                <div class="card-body p-4">
+                  <h4 class="font-semibold mb-1">Custom training plan</h4>
+                  <p class="text-base-content/70">
+                    Programming tailored to your level, schedule, equipment, and
+                    injury history.
                   </p>
-                  <p class="text-lg font-bold">$49 / month</p>
-                  <ul class="text-xs text-base-content/70 space-y-1">
-                    <li>Guided training and meal plan</li>
-                    <li>No live Zooms or chat</li>
-                    <li>Independent pace, with structure</li>
-                  </ul>
-                  <a href="#contact" class="btn btn-sm btn-outline mt-2 w-full">
-                    Click Here For Basic
-                  </a>
+                </div>
+              </div>
+              <div class="card bg-base-100/70 border border-base-300/70">
+                <div class="card-body p-4">
+                  <h4 class="font-semibold mb-1">Simple nutrition guidance</h4>
+                  <p class="text-base-content/70">
+                    Flexible guidelines that fit eating out, events, and family
+                    life.
+                  </p>
+                </div>
+              </div>
+              <div class="card bg-base-100/70 border border-base-300/70">
+                <div class="card-body p-4">
+                  <h4 class="font-semibold mb-1">Weekly pattern reviews</h4>
+                  <p class="text-base-content/70">
+                    We look at trends in your training, nutrition and lifestyle
+                    to decide next steps.
+                  </p>
+                </div>
+              </div>
+              <div class="card bg-base-100/70 border border-base-300/70">
+                <div class="card-body p-4">
+                  <h4 class="font-semibold mb-1">Messaging access</h4>
+                  <p class="text-base-content/70">
+                    Ask questions, send form videos, and get feedback between
+                    check-ins.
+                  </p>
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
 
-      <!-- challenge section (mirrors Workman Would Challenge feel) -->
-      <section id="challenge" class="border-b border-base-200 bg-base-200/40">
-        <div
-          class="max-w-6xl mx-auto px-4 py-12 md:py-16 grid md:grid-cols-2 gap-10 items-center"
-        >
-          <div class="space-y-4">
-            <h2
-              class="text-sm tracking-[0.3em] uppercase text-primary font-semibold"
+            <NuxtLink
+              to="/work-with-us"
+              class="btn btn-outline btn-primary mt-2 w-full sm:w-auto"
             >
-              The JT Challenge
-            </h2>
-            <p class="text-2xl md:text-3xl font-bold">
-              Built to sharpen your body, mind, and spirit.
-            </p>
-            <p class="text-base text-base-content/80">
-              This challenge is designed to demand more from you in every
-              category — training, mindset, discipline, and how you show up for
-              the people around you.
-            </p>
-            <p class="text-sm text-base-content/70">
-              You will push your limits in the gym, strengthen your thinking,
-              and rebuild the way you talk to yourself. The point is not to
-              break you — it is to build you.
-            </p>
-            <div class="space-y-2 pt-3 text-xs text-base-content/80">
-              <p>
-                <span class="font-semibold">Daily journaling:</span> micro
-                goals, gratitude, and nightly inventory.
-              </p>
-              <p>
-                <span class="font-semibold">Daily connection:</span> reach out
-                to 3 people every day.
-              </p>
-              <p>
-                <span class="font-semibold">Training:</span> 5 lifting days each
-                week or structured bodyweight work.
-              </p>
-              <p>
-                <span class="font-semibold">Movement:</span> daily cardio and
-                one weekly activity you genuinely enjoy.
-              </p>
-              <p>
-                <span class="font-semibold">Nutrition:</span> real food focus,
-                simple options to handle cravings.
-              </p>
-            </div>
-            <a href="#join" class="btn btn-primary mt-4 w-full sm:w-auto">
-              Join The Challenge
-            </a>
-          </div>
-
-          <div
-            class="rounded-3xl bg-base-100 border border-base-300 shadow-sm p-6 space-y-4 text-sm text-base-content/80"
-          >
-            <p class="font-semibold text-sm">
-              This is chapter one of a new beginning.
-            </p>
-            <p>
-              If you have been asking for change, this is where you start
-              proving you mean it. Show up when it is easy, and especially when
-              it is not.
-            </p>
-            <p>
-              Track your work, check in with your people, and ask for help when
-              you need it. That is how we win here.
-            </p>
-            <p class="text-xs text-base-content/60">
-              Note: This section can be wired into your app or CRM for tracking
-              points, streaks, and check-ins.
-            </p>
+              See if coaching is right for you
+            </NuxtLink>
           </div>
         </div>
       </section>
 
-      <!-- results / transformations strip -->
-      <section id="results" class="border-b border-base-200 bg-base-100">
-        <div class="max-w-6xl mx-auto px-4 py-12 md:py-16">
-          <div
-            class="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-8"
-          >
-            <div>
-              <h2
-                class="text-sm tracking-[0.3em] uppercase text-primary font-semibold"
-              >
-                Results
-              </h2>
-              <p class="text-2xl md:text-3xl font-bold">
-                The results speak for themselves.
-              </p>
-            </div>
-            <a href="#consult" class="btn btn-sm btn-outline w-full md:w-auto">
-              Book A Consult To Start Yours
-            </a>
-          </div>
-
-          <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div class="card bg-base-200/60 border border-base-300">
-              <div class="card-body gap-2">
-                <p class="text-xs uppercase tracking-wide text-base-content/70">
-                  3 Month Cut
-                </p>
-                <p class="font-bold text-sm">Alex — 203lbs to 188lbs</p>
-                <p class="text-xs text-base-content/70">
-                  More energy, more confidence, and a sustainable rhythm with
-                  work and family.
-                </p>
-              </div>
-            </div>
-            <div class="card bg-base-200/60 border border-base-300">
-              <div class="card-body gap-2">
-                <p class="text-xs uppercase tracking-wide text-base-content/70">
-                  Mindset Shift
-                </p>
-                <p class="font-bold text-sm">JP — From stuck to leader</p>
-                <p class="text-xs text-base-content/70">
-                  Built muscle, built discipline, and became a voice of
-                  encouragement for the entire team.
-                </p>
-              </div>
-            </div>
-            <div class="card bg-base-200/60 border border-base-300">
-              <div class="card-body gap-2">
-                <p class="text-xs uppercase tracking-wide text-base-content/70">
-                  42 Day Sprint
-                </p>
-                <p class="font-bold text-sm">Nate — 6 week overhaul</p>
-                <p class="text-xs text-base-content/70">
-                  100% compliance to training and nutrition — proof of what
-                  happens when you commit fully.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- media section -->
-      <section id="media" class="border-b border-base-200 bg-base-200/40">
-        <div class="max-w-6xl mx-auto px-4 py-12 md:py-16">
-          <div
-            class="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-8"
-          >
-            <div>
-              <h2
-                class="text-sm tracking-[0.3em] uppercase text-primary font-semibold"
-              >
-                Media
-              </h2>
-              <p class="text-2xl md:text-3xl font-bold">Hear more from JT.</p>
-              <p class="text-sm text-base-content/70 mt-2">
-                Long-form conversations on recovery, discipline, and earning
-                your confidence every day.
-              </p>
-            </div>
-          </div>
-
-          <div class="grid md:grid-cols-3 gap-6">
-            <div class="card bg-base-100 border border-base-300">
-              <div class="card-body gap-2">
-                <p class="text-xs uppercase tracking-wide text-base-content/70">
-                  Podcast
-                </p>
-                <p class="font-bold text-sm">
-                  Discovering hope in hard seasons
-                </p>
-                <p class="text-xs text-base-content/70">
-                  JT breaks down the early days of his journey and what keeps
-                  him showing up now.
-                </p>
-                <button class="btn btn-sm btn-outline mt-2">Watch Now</button>
-              </div>
-            </div>
-            <div class="card bg-base-100 border border-base-300">
-              <div class="card-body gap-2">
-                <p class="text-xs uppercase tracking-wide text-base-content/70">
-                  Podcast
-                </p>
-                <p class="font-bold text-sm">Standing out in a crowded space</p>
-                <p class="text-xs text-base-content/70">
-                  How JT built a coaching brand rooted in service, not
-                  shortcuts.
-                </p>
-                <button class="btn btn-sm btn-outline mt-2">Watch Now</button>
-              </div>
-            </div>
-            <div class="card bg-base-100 border border-base-300">
-              <div class="card-body gap-2">
-                <p class="text-xs uppercase tracking-wide text-base-content/70">
-                  Podcast
-                </p>
-                <p class="font-bold text-sm">Fitness, sobriety, and service</p>
-                <p class="text-xs text-base-content/70">
-                  A conversation about using your story to help other people
-                  win.
-                </p>
-                <button class="btn btn-sm btn-outline mt-2">Watch Now</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- consult + contact section -->
-      <section id="consult" class="border-b border-base-200 bg-base-100">
+      <!-- outcomes grid -->
+      <section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-14">
         <div
-          class="max-w-6xl mx-auto px-4 py-12 md:py-16 grid md:grid-cols-2 gap-10"
+          class="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-6"
         >
-          <div class="space-y-4">
-            <h2
-              class="text-sm tracking-[0.3em] uppercase text-primary font-semibold"
+          <div>
+            <p
+              class="text-xs uppercase tracking-[0.25em] text-primary font-semibold mb-2"
             >
-              Book A Consult
+              goals we work on
+            </p>
+            <h2 class="text-2xl md:text-3xl font-bold tracking-tight">
+              What we help you build (and keep).
             </h2>
-            <p class="text-2xl md:text-3xl font-bold">
-              Ready to talk through your goals?
-            </p>
-            <p class="text-base text-base-content/80">
-              Use the form to request a coaching consult. We will cover your
-              goals, training history, and what it will take to get there.
-            </p>
-            <p class="text-sm text-base-content/70">
-              This is not a sales pitch. It is an honest conversation about the
-              work ahead, the support you will get, and whether it is the right
-              fit on both sides.
-            </p>
-            <a href="#contact" class="btn btn-primary w-full sm:w-auto mt-4">
-              Go To Contact
-            </a>
           </div>
+          <p class="text-xs sm:text-sm md:max-w-md text-base-content/70">
+            Whether you want to lean out, add muscle, or simply feel more
+            confident in your body, we design your plan around what matters most
+            to you.
+          </p>
+        </div>
 
-          <!-- simple contact form (static for now) -->
-          <div id="contact" class="card bg-base-200/60 border border-base-300">
-            <div class="card-body gap-3">
-              <h3 class="font-semibold text-sm uppercase tracking-[0.25em]">
-                Contact JT Fitness
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 text-sm">
+          <article
+            v-for="card in goal_cards"
+            :key="card.title"
+            class="card bg-base-200/60 border border-base-300/80 hover:border-primary/70 hover:bg-base-200 transition-colors"
+          >
+            <div class="card-body p-4 sm:p-5">
+              <p
+                class="text-[0.7rem] uppercase tracking-[0.18em] text-primary/80 font-semibold"
+              >
+                {{ card.label }}
+              </p>
+              <h3 class="mt-2 text-sm sm:text-base font-semibold">
+                {{ card.title }}
               </h3>
-              <form class="space-y-3" @submit.prevent>
-                <label class="form-control">
-                  <span class="label">
-                    <span class="label-text text-xs uppercase tracking-wide">
-                      Name
-                    </span>
-                  </span>
-                  <input
-                    type="text"
-                    placeholder="Full name"
-                    class="input input-bordered input-sm"
-                  />
-                </label>
+              <p class="mt-2 text-[0.7rem] sm:text-xs text-base-content/70">
+                {{ card.description }}
+              </p>
+              <NuxtLink
+                to="/services"
+                class="mt-3 text-xs sm:text-sm link link-primary inline-flex items-center gap-1"
+              >
+                Learn more
+                <span class="mdi mdi-arrow-right text-sm" />
+              </NuxtLink>
+            </div>
+          </article>
+        </div>
+      </section>
 
-                <label class="form-control">
-                  <span class="label">
-                    <span class="label-text text-xs uppercase tracking-wide">
-                      Email
-                    </span>
-                  </span>
-                  <input
-                    type="email"
-                    placeholder="you@example.com"
-                    class="input input-bordered input-sm"
-                  />
-                </label>
+      <!-- coaches -->
+      <section class="bg-base-200/40 border-y border-base-300">
+        <div
+          class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-14 space-y-8 md:space-y-10"
+        >
+          <div
+            class="flex flex-col md:flex-row md:items-end md:justify-between gap-4"
+          >
+            <div>
+              <p
+                class="text-xs uppercase tracking-[0.25em] text-primary font-semibold mb-2"
+              >
+                coaching team
+              </p>
+              <h2 class="text-2xl md:text-3xl font-bold tracking-tight">
+                Coaches who live the lifestyle they teach.
+              </h2>
+              <p
+                class="mt-3 text-sm sm:text-base text-base-content/80 max-w-xl"
+              >
+                Our coaches are lifters, students of nutrition, and people with
+                real responsibilities – just like you. You get clear guidance
+                and realistic expectations, not perfectionism.
+              </p>
+            </div>
+            <NuxtLink
+              to="/coaches"
+              class="btn btn-ghost border border-base-300 rounded-full text-sm sm:text-base self-start"
+            >
+              Meet the coaches
+            </NuxtLink>
+          </div>
 
-                <label class="form-control">
-                  <span class="label">
-                    <span class="label-text text-xs uppercase tracking-wide">
-                      Message
-                    </span>
-                  </span>
-                  <textarea
-                    class="textarea textarea-bordered textarea-sm min-h-[96px]"
-                    placeholder="Share a bit about your goals and where you are starting from."
-                  ></textarea>
-                </label>
-
-                <button
-                  type="submit"
-                  class="btn btn-primary btn-sm w-full mt-2"
+          <div class="grid md:grid-cols-3 gap-5 md:gap-6">
+            <article
+              v-for="coach in coach_cards"
+              :key="coach.name"
+              class="card bg-base-100/80 border border-base-300/80 hover:border-primary/70 transition-colors"
+            >
+              <div class="card-body p-5 sm:p-6 flex flex-col gap-4">
+                <div
+                  class="rounded-2xl bg-gradient-to-tr from-primary/40 to-base-200 aspect-[4/5] mb-2 flex items-end overflow-hidden"
                 >
-                  Submit Inquiry
-                </button>
-              </form>
-
-              <div class="pt-3 text-xs text-base-content/70">
-                <p>
-                  For media inquiries:
-                  <span class="font-mono">media@jtfitness.com</span>
+                  <div class="w-full p-4">
+                    <p class="badge badge-outline badge-sm mb-2">
+                      {{ coach.badge }}
+                    </p>
+                    <p class="text-xs text-base-content/70">
+                      {{ coach.photo_caption }}
+                    </p>
+                  </div>
+                </div>
+                <div>
+                  <p
+                    class="text-xs uppercase tracking-[0.18em] text-primary/80 font-semibold"
+                  >
+                    {{ coach.role }}
+                  </p>
+                  <h3 class="mt-1 text-lg font-semibold">
+                    {{ coach.name }}
+                  </h3>
+                </div>
+                <p class="text-sm text-base-content/80">
+                  {{ coach.bio }}
                 </p>
+                <ul class="text-xs text-base-content/70 space-y-1.5">
+                  <li
+                    v-for="point in coach.highlights"
+                    :key="point"
+                    class="flex items-start gap-2"
+                  >
+                    <span
+                      class="mt-0.5 mdi mdi-dot-circle text-primary/80 text-sm"
+                    />
+                    <span>{{ point }}</span>
+                  </li>
+                </ul>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- testimonials with transition-group -->
+      <section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-14">
+        <div
+          class="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-6"
+        >
+          <div>
+            <p
+              class="text-xs uppercase tracking-[0.25em] text-primary font-semibold mb-2"
+            >
+              client stories
+            </p>
+            <h2 class="text-2xl md:text-3xl font-bold tracking-tight">
+              Real people, real routines, real changes.
+            </h2>
+            <p class="mt-3 text-sm sm:text-base text-base-content/80 max-w-xl">
+              Our clients are parents, professionals, and students with busy
+              lives – not full-time athletes. Their results come from realistic
+              plans and consistent execution.
+            </p>
+          </div>
+          <NuxtLink
+            to="/results"
+            class="btn btn-outline btn-primary btn-sm rounded-full self-start"
+          >
+            See more transformations
+          </NuxtLink>
+        </div>
+
+        <transition-group
+          tag="div"
+          class="grid gap-4 md:gap-6 md:grid-cols-3"
+          enter-active-class="transition ease-out duration-200"
+          enter-from-class="translate-x-full opacity-0"
+          enter-to-class="translate-x-0 opacity-100"
+          leave-active-class="transition ease-in duration-200"
+          leave-from-class="translate-x-0 opacity-100"
+          leave-to-class="opacity-0"
+        >
+          <article
+            v-for="item in testimonial_items"
+            :key="item.name"
+            class="card bg-base-200/70 border border-base-300/80"
+          >
+            <div class="card-body p-5 sm:p-6 flex flex-col gap-3">
+              <div class="flex items-center justify-between gap-3">
+                <div>
+                  <h3 class="text-sm sm:text-base font-semibold">
+                    {{ item.name }}
+                  </h3>
+                  <p class="text-xs text-base-content/60">
+                    {{ item.tagline }}
+                  </p>
+                </div>
+                <div class="badge badge-primary badge-outline badge-sm">
+                  {{ item.result_badge }}
+                </div>
+              </div>
+
+              <p class="text-xs sm:text-sm text-base-content/80">
+                “{{ item.quote }}”
+              </p>
+
+              <div
+                class="mt-2 flex flex-wrap gap-2 text-[0.7rem] text-base-content/70"
+              >
+                <span
+                  v-for="pill in item.pills"
+                  :key="pill"
+                  class="badge badge-ghost badge-xs py-2 px-3 rounded-full"
+                >
+                  {{ pill }}
+                </span>
               </div>
             </div>
+          </article>
+        </transition-group>
+
+        <div
+          class="mt-8 rounded-2xl bg-base-200/60 border border-base-300/80 p-5 sm:p-6 md:p-7 flex flex-col md:flex-row md:items-center md:justify-between gap-4"
+        >
+          <div>
+            <h3 class="text-lg md:text-xl font-semibold">
+              Want a realistic plan for the next 12 weeks?
+            </h3>
+            <p class="mt-2 text-sm sm:text-base text-base-content/80 max-w-xl">
+              Tell us about your schedule, training history, and goals. We’ll
+              walk you through what we’d focus on first – no obligation to sign
+              up.
+            </p>
           </div>
+          <NuxtLink
+            to="/free-guides"
+            class="btn btn-primary rounded-full px-6 text-sm sm:text-base"
+          >
+            Get a free game plan
+          </NuxtLink>
         </div>
       </section>
     </main>
 
     <!-- footer -->
-    <footer class="bg-base-100 border-t border-base-200">
+    <footer class="border-t border-base-300 bg-base-100">
       <div
-        class="max-w-6xl mx-auto px-4 py-6 flex flex-col md:flex-row gap-4 items-center justify-between"
+        class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col md:flex-row items-start md:items-center justify-between gap-3 text-xs sm:text-sm text-base-content/70"
       >
-        <div class="text-xs text-base-content/70 text-center md:text-left">
-          <p class="font-semibold tracking-[0.25em] uppercase">JT Fitness</p>
-          <p>Online coaching • Community • Lifestyle</p>
-        </div>
-        <div class="flex flex-col items-center gap-2">
-          <p class="text-xs uppercase tracking-[0.25em] text-base-content/60">
-            Follow Me
+        <div class="space-y-1">
+          <p class="font-semibold text-base-content/80">
+            TAUGHT NOT TOLD © 2018 – {{ new Date().getFullYear() }}
           </p>
-          <div class="flex gap-3 text-xs">
-            <a href="#" class="link link-hover">Instagram</a>
-            <a href="#" class="link link-hover">TikTok</a>
-            <a href="#" class="link link-hover">YouTube</a>
-          </div>
+          <p>1900 N Tustin St. Orange, CA • 1-805-428-9365</p>
+        </div>
+        <div class="flex flex-wrap gap-3 md:gap-4">
+          <NuxtLink to="/privacy" class="link link-hover"
+            >Privacy Policy</NuxtLink
+          >
+          <NuxtLink to="/community" class="link link-hover">Community</NuxtLink>
+          <NuxtLink to="/podcast" class="link link-hover">Podcast</NuxtLink>
+          <NuxtLink to="/blog" class="link link-hover">Blog</NuxtLink>
         </div>
       </div>
     </footer>
   </div>
 </template>
 
-<style scoped>
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 0.15s ease-out;
-}
-.fade-enter-from,
-.fade-leave-to {
-  opacity: 0;
-}
-</style>
+<script setup>
+const hero_image_url = "/images/dead_lift.jpg"; // replace with your asset path
+
+const goal_cards = [
+  {
+    label: "fat loss",
+    title: "Lose body fat without losing strength",
+    description:
+      "Dial in your intake and training so the scale moves while you still feel strong and fueled.",
+  },
+  {
+    label: "muscle gain",
+    title: "Build lean, defined muscle",
+    description:
+      "Grow the muscle groups you care about most through progressive, well-structured training.",
+  },
+  {
+    label: "confidence",
+    title: "Feel better in and out of the gym",
+    description:
+      "Improve energy, performance, and body image so confidence shows up in everyday life.",
+  },
+  {
+    label: "strength",
+    title: "Hit numbers you are proud of",
+    description:
+      "Track your lifts, celebrate small wins, and watch your performance steadily climb.",
+  },
+];
+
+const coach_cards = [
+  {
+    name: "Coach Tyler",
+    role: "Head Coach / Founder",
+    badge: "Food Freedom Blueprint",
+    photo_caption:
+      "Leading clients through fat loss, performance, and lifestyle change.",
+    bio: "Tyler focuses on sustainable fat loss and muscle gain, using pattern-based coaching instead of all-or-nothing plans.",
+    highlights: [
+      "6+ years of in-person and online coaching",
+      "Specializes in lifestyle-friendly fat loss",
+      "Known for direct, practical feedback",
+    ],
+  },
+  {
+    name: "Coach Jake",
+    role: "Fat Loss & Injury-Aware Coach",
+    badge: "Rehab-informed training",
+    photo_caption: "Blending strength work with smart movement progressions.",
+    bio: "Jake helps clients train around old injuries while still making meaningful strength and physique progress.",
+    highlights: [
+      "Background in physical therapy environments",
+      "Focus on joint-friendly exercise selection",
+      "Ideal for post-injury or cautious lifters",
+    ],
+  },
+  {
+    name: "Coach Nate",
+    role: "Physique & Strength Coach",
+    badge: "Muscle-focused programming",
+    photo_caption: "Detail-oriented training for targeted physique goals.",
+    bio: "Nate designs training blocks that bring up lagging muscle groups, with attention to technique and progression.",
+    highlights: [
+      "Emphasis on form, tempo, and intent",
+      "Great for clients seeking a “shaped” look",
+      "Provides high-detail form breakdowns",
+    ],
+  },
+];
+
+const testimonial_items = [
+  {
+    name: "Claire C.",
+    tagline: "Down 22 lbs, stronger than ever",
+    result_badge: "12 weeks",
+    quote:
+      "This was the first time a coach actually explained what we were doing and why. I feel equipped to keep this going on my own.",
+    pills: ["Busy professional", "Fat loss", "Education focused"],
+  },
+  {
+    name: "Matthieu T.",
+    tagline: "Back to lifting after injuries",
+    result_badge: "+40 lb on key lifts",
+    quote:
+      "They built my plan around old injuries instead of ignoring them. I feel stronger and more confident under the bar than I have in years.",
+    pills: ["Injury history", "Strength", "Form coaching"],
+  },
+  {
+    name: "Kaylee K.",
+    tagline: "More strength, less obsession",
+    result_badge: "Lifestyle shift",
+    quote:
+      "I stopped bouncing between extremes and finally found a routine that fits my life. The weekly check-ins kept me grounded, not guilty.",
+    pills: ["Mindset shift", "Habit building", "Sustainable"],
+  },
+];
+</script>

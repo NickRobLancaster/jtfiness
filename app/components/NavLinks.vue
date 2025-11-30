@@ -27,71 +27,43 @@ function handleSelected() {
     </nuxt-link>
 
     <nuxt-link
-      to="/contact"
+      to="/jt-method"
       @click="handleSelected"
       active-class="border-base-300
  bg-primary"
       class="btn bg-base-100 text-base-content"
     >
-      Contact
-    </nuxt-link>
-
-    <div class="dropdown dropdown-hover">
-      <!-- trigger -->
-      <div
-        tabindex="0"
-        role="button"
-        class="btn bg-base-100 text-base-content m-1"
-      >
-        About
-      </div>
-
-      <!-- dropdown list -->
-      <ul
-        tabindex="-1"
-        class="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow-sm"
-      >
-        <li class="whitespace-nowrap">
-          <nuxt-link
-            to="/about-us"
-            @click="handleSelected"
-            active-class="border-base-300 bg-primary text-primary-content"
-            class="text-base-content hover:bg-base-200 rounded-lg"
-          >
-            About Us
-          </nuxt-link>
-        </li>
-        <li class="whitespace-nowrap">
-          <nuxt-link
-            to="/about-this-program"
-            @click="handleSelected"
-            active-class="border-base-300 bg-primary text-primary-content"
-            class="text-base-content hover:bg-base-200 rounded-lg"
-          >
-            About This Program
-          </nuxt-link>
-        </li>
-      </ul>
-    </div>
-
-    <nuxt-link
-      to="/learn-more"
-      @click="handleSelected"
-      active-class="border-base-300
- bg-primary"
-      class="btn bg-base-100 text-base-content"
-    >
-      Learn More
+      The JT Method
     </nuxt-link>
 
     <nuxt-link
-      to="/request-kits"
+      to="/work-with-us"
       @click="handleSelected"
       active-class="border-base-300
  bg-primary"
       class="btn bg-base-100 text-base-content"
     >
-      Request Kits
+      Work With Us
+    </nuxt-link>
+
+    <nuxt-link
+      to="/results"
+      @click="handleSelected"
+      active-class="border-base-300
+ bg-primary"
+      class="btn bg-base-100 text-base-content"
+    >
+      Results
+    </nuxt-link>
+
+    <nuxt-link
+      to="/free-guides"
+      @click="handleSelected"
+      active-class="border-base-300
+ bg-primary"
+      class="btn bg-base-100 text-base-content"
+    >
+      Free Guides
     </nuxt-link>
     <!-- SANDBAG -->
     <!-- <nuxt-link
@@ -105,13 +77,13 @@ function handleSelected() {
     </nuxt-link> -->
 
     <nuxt-link
-      to="/check-results"
+      to="/services"
       @click="handleSelected"
       active-class="border-base-300
  bg-primary"
       class="btn bg-base-100 text-base-content"
     >
-      Check Results
+      Services
     </nuxt-link>
   </div>
 </template>
