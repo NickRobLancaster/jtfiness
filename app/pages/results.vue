@@ -365,7 +365,7 @@
 </template>
 
 <script setup>
-const hero_image_url = "/images/dead_lift.jpg"; // swap to a dedicated results hero if you want
+const hero_image_url = "/images/results.jpg"; // swap to a dedicated results hero if you want
 
 const transformation_items = [
   {

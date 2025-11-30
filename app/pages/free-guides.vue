@@ -220,7 +220,7 @@
 </template>
 
 <script setup>
-const hero_image_url = "/images/dead_lift.jpg";
+const hero_image_url = "/images/rows.jpg";
 
 const free_guides = [
   {

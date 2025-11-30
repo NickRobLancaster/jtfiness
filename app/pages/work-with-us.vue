@@ -295,7 +295,7 @@
 </template>
 
 <script setup>
-const hero_image_url = "/images/dead_lift.jpg";
+const hero_image_url = "/images/squat_weights.jpg";
 
 const contact_phone_display = "951-385-1941";
 const contact_phone_href = "tel:19513851941";

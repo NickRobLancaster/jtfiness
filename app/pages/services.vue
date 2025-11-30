@@ -323,7 +323,7 @@
 </template>
 
 <script setup>
-const hero_image_url = "/images/dead_lift.jpg";
+const hero_image_url = "/images/services.jpg";
 
 // top simple goal cards (weight loss, muscle gain, strength)
 const goal_cards = [
