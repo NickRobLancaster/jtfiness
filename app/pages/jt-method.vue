@@ -26,7 +26,7 @@
             </h1>
 
             <p
-              class="mt-4 md:mt-5 text-sm sm:text-base md:text-lg text-base-100/80 max-w-xl"
+              class="mt-4 md:mt-5 text-sm sm:text-base md:text-lg text-white max-w-xl"
             >
               The JT Method is a four-phase coaching framework that takes you
               from scattered habits and guesswork to a stronger body, better
@@ -36,14 +36,14 @@
             <div class="mt-6 flex flex-wrap gap-3">
               <NuxtLink
                 to="/work-with-us"
-                class="btn btn-primary rounded-full px-5 md:px-7 text-sm md:text-base font-semibold"
+                class="btn btn-primary rounded-full px-5 md:px-7 text-sm text-white font-semibold"
               >
                 See if the JT Method is right for you
               </NuxtLink>
 
               <NuxtLink
                 to="/contact"
-                class="btn btn-ghost border border-base-300 rounded-full px-5 md:px-7 text-sm md:text-base"
+                class="btn btn-ghost border border-base-300 rounded-full px-5 md:px-7 text-sm text-white"
               >
                 Talk with Justin
               </NuxtLink>
@@ -55,17 +55,15 @@
               <div
                 class="stat bg-base-100/10 rounded-2xl border border-base-300/40 p-4"
               >
-                <div
-                  class="stat-title text-[0.7rem] sm:text-xs text-base-100/70"
-                >
+                <div class="stat-title text-[0.7rem] sm:text-xs text-white">
                   Built for busy people
                 </div>
-                <div class="stat-value text-lg sm:text-2xl font-extrabold">
+                <div
+                  class="stat-value text-lg sm:text-2xl font-extrabold text-white"
+                >
                   Real life first
                 </div>
-                <div
-                  class="stat-desc text-[0.7rem] sm:text-xs text-base-100/70"
-                >
+                <div class="stat-desc text-[0.7rem] sm:text-xs text-white">
                   Plans that work with your schedule, not against it.
                 </div>
               </div>
@@ -73,17 +71,15 @@
               <div
                 class="stat bg-base-100/10 rounded-2xl border border-base-300/40 p-4"
               >
-                <div
-                  class="stat-title text-[0.7rem] sm:text-xs text-base-100/70"
-                >
+                <div class="stat-title text-[0.7rem] sm:text-xs text-white">
                   Education based
                 </div>
-                <div class="stat-value text-lg sm:text-2xl font-extrabold">
+                <div
+                  class="stat-value text-lg sm:text-2xl font-extrabold text-white"
+                >
                   Learn as you go
                 </div>
-                <div
-                  class="stat-desc text-[0.7rem] sm:text-xs text-base-100/70"
-                >
+                <div class="stat-desc text-[0.7rem] sm:text-xs text-white">
                   So you can keep progressing long after coaching ends.
                 </div>
               </div>

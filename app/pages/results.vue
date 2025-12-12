@@ -19,14 +19,14 @@
             </p>
 
             <h1
-              class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight md:leading-[1.1] max-w-3xl"
+              class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight md:leading-[1.1] text-white max-w-3xl"
             >
               Results that come from
               <span class="text-primary">a real plan</span>, not guesswork.
             </h1>
 
             <p
-              class="mt-4 md:mt-5 text-sm sm:text-base md:text-lg text-base-100/90 max-w-xl"
+              class="mt-4 md:mt-5 text-sm sm:text-base md:text-lg text-white max-w-xl"
             >
               See what happens when structured training, clear nutrition, and
               consistent coaching come together. These are real people who
@@ -44,29 +44,27 @@
 
               <NuxtLink
                 to="/method"
-                class="btn btn-ghost border border-base-300 rounded-full px-5 md:px-7 text-sm md:text-base"
+                class="btn btn-ghost border border-base-300 rounded-full px-5 md:px-7 text-sm text-white"
               >
                 See how the JT Method works
               </NuxtLink>
             </div>
 
             <div
-              class="mt-6 grid grid-cols-2 gap-4 max-w-sm text-xs sm:text-sm text-base-100/80"
+              class="mt-6 grid grid-cols-2 gap-4 max-w-sm text-xs sm:text-sm text-white"
             >
               <div
                 class="stat bg-base-100/10 rounded-2xl border border-base-100/40 p-4"
               >
-                <div
-                  class="stat-title text-[0.7rem] sm:text-xs text-base-100/80"
-                >
+                <div class="stat-title text-[0.7rem] sm:text-xs text-white">
                   Not just before-and-after photos
                 </div>
-                <div class="stat-value text-lg sm:text-2xl font-extrabold">
+                <div
+                  class="stat-value text-lg sm:text-2xl font-extrabold text-white"
+                >
                   Whole-life wins
                 </div>
-                <div
-                  class="stat-desc text-[0.7rem] sm:text-xs text-base-100/80"
-                >
+                <div class="stat-desc text-[0.7rem] sm:text-xs text-white">
                   Strength, energy, confidence, and a routine you can keep.
                 </div>
               </div>
@@ -74,17 +72,15 @@
               <div
                 class="stat bg-base-100/10 rounded-2xl border border-base-100/40 p-4"
               >
-                <div
-                  class="stat-title text-[0.7rem] sm:text-xs text-base-100/80"
-                >
+                <div class="stat-title text-[0.7rem] sm:text-xs text-white">
                   Personalized coaching
                 </div>
-                <div class="stat-value text-lg sm:text-2xl font-extrabold">
+                <div
+                  class="stat-value text-lg sm:text-2xl font-extrabold text-white"
+                >
                   1:1 attention
                 </div>
-                <div
-                  class="stat-desc text-[0.7rem] sm:text-xs text-base-100/80"
-                >
+                <div class="stat-desc text-[0.7rem] sm:text-xs text-white">
                   Programs built around your schedule, history, and goals.
                 </div>
               </div>

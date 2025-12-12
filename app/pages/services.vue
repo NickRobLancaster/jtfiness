@@ -18,7 +18,7 @@
             </p>
 
             <h1
-              class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight md:leading-[1.1] max-w-3xl"
+              class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight md:leading-[1.1] max-w-3xl text-white"
             >
               Coaching that covers
               <span class="text-primary">your whole life</span>, not just your
@@ -26,7 +26,7 @@
             </h1>
 
             <p
-              class="mt-4 md:mt-5 text-sm sm:text-base md:text-lg text-base-100/90 max-w-xl"
+              class="mt-4 md:mt-5 text-sm sm:text-base md:text-lg text-base-100/90 max-w-xl text-white"
             >
               Our coaching brings together training, nutrition, and lifestyle so
               your plan matches your goals, schedule, and experience level –
@@ -37,14 +37,14 @@
             <div class="mt-6 flex flex-wrap gap-3">
               <NuxtLink
                 to="/work-with-us"
-                class="btn btn-primary rounded-full px-5 md:px-7 text-sm md:text-base font-semibold"
+                class="btn btn-primary rounded-full px-5 md:px-7 text-sm md:text-base font-semibold text-white"
               >
                 Apply for coaching
               </NuxtLink>
 
               <NuxtLink
                 to="/method"
-                class="btn btn-ghost border border-base-300 rounded-full px-5 md:px-7 text-sm md:text-base"
+                class="btn btn-ghost border border-base-300 rounded-full px-5 md:px-7 text-sm text-white"
               >
                 Learn the JT Method
               </NuxtLink>
@@ -198,7 +198,7 @@
             <article
               v-for="option in coaching_options"
               :key="option.slug"
-              class="card bg-base-100/90 border border-base-300/80"
+              class="card bg-base-100/90 border text-white"
             >
               <div class="card-body p-5 sm:p-6 md:p-7 flex flex-col gap-4">
                 <div class="flex items-start justify-between gap-3">

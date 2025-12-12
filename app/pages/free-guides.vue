@@ -18,7 +18,7 @@
             </p>
 
             <h1
-              class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight md:leading-[1.1] max-w-3xl"
+              class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight md:leading-[1.1] max-w-3xl text-white"
             >
               Download free guides
               <br />
@@ -26,7 +26,7 @@
             </h1>
 
             <p
-              class="mt-4 md:mt-5 text-sm sm:text-base md:text-lg text-base-100/90 max-w-xl"
+              class="mt-4 md:mt-5 text-sm sm:text-base md:text-lg text-white max-w-xl"
             >
               These resources walk you through the same principles we use with
               coaching clients – so you can start getting better results in the
@@ -43,7 +43,7 @@
 
               <NuxtLink
                 to="/method"
-                class="btn btn-ghost border border-base-300 rounded-full px-5 md:px-7 text-sm md:text-base"
+                class="btn btn-ghost border border-base-300 rounded-full px-5 md:px-7 text-sm text-white"
               >
                 Learn the JT Method
               </NuxtLink>

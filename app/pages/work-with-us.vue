@@ -26,7 +26,7 @@
             </h1>
 
             <p
-              class="mt-4 md:mt-5 text-sm sm:text-base md:text-lg text-base-100/80 max-w-xl"
+              class="mt-4 md:mt-5 text-sm sm:text-base md:text-lg text-white max-w-xl"
             >
               Have questions about coaching, in-person sessions, or online
               programming? Send a message or call directly and Justin will
@@ -50,7 +50,7 @@
             </div>
 
             <div
-              class="mt-5 text-xs sm:text-sm text-base-100/70 flex flex-col sm:flex-row gap-2 sm:items-center"
+              class="mt-5 text-xs sm:text-sm text-white flex flex-col sm:flex-row gap-2 sm:items-center"
             >
               <p>Typical response within 24 hours.</p>
               <span
@@ -78,7 +78,7 @@
                 >
                   {{ contact_phone_display }}
                 </a>
-                <p class="text-xs text-base-content/70">
+                <p class="text-xs text-white">
                   Tap to call or press and hold to copy.
                 </p>
               </div>
@@ -93,14 +93,12 @@
                 >
                   {{ contact_email }}
                 </a>
-                <p class="text-xs text-base-content/70">
-                  Tap to start a new message.
-                </p>
+                <p class="text-xs text-white">Tap to start a new message.</p>
               </div>
 
               <div class="divider my-3" />
 
-              <div class="space-y-1 text-xs text-base-content/70">
+              <div class="space-y-1 text-xs text-white">
                 <p class="font-semibold text-sm text-base-content">
                   Coaching hours
                 </p>
@@ -152,7 +150,7 @@
                   >
                     {{ contact_phone_display }}
                   </a>
-                  <p class="mt-2 text-xs text-base-content/70">
+                  <p class="mt-2 text-xs text-white">
                     Best for quick questions, scheduling, or checking current
                     openings.
                   </p>
@@ -172,7 +170,7 @@
                   >
                     {{ contact_email }}
                   </a>
-                  <p class="mt-2 text-xs text-base-content/70">
+                  <p class="mt-2 text-xs text-white">
                     Best for sharing your background, goals, and preferred
                     coaching style.
                   </p>
@@ -180,7 +178,7 @@
               </div>
             </div>
 
-            <div class="text-xs sm:text-sm text-base-content/70 space-y-1.5">
+            <div class="text-xs sm:text-sm text-white space-y-1.5">
               <p>
                 Please include any injuries, training experience, and schedule
                 constraints so we can recommend the right path for you.
@@ -253,7 +251,7 @@
                 Submit (placeholder)
               </button>
 
-              <p class="mt-3 text-[0.7rem] text-base-content/70">
+              <p class="mt-3 text-[0.7rem] text-white">
                 This form is a front-end placeholder. Connect it to your
                 preferred email, CRM, or backend endpoint when you are ready.
               </p>
@@ -266,7 +264,7 @@
     <!-- footer -->
     <footer class="border-t border-base-300 bg-base-100">
       <div
-        class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col md:flex-row items-start md:items-center justify-between gap-3 text-xs sm:text-sm text-base-content/70"
+        class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col md:flex-row items-start md:items-center justify-between gap-3 text-xs sm:text-sm text-white"
       >
         <div class="space-y-1">
           <p class="font-semibold text-base-content/80">
