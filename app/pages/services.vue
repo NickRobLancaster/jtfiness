@@ -26,7 +26,7 @@
             </h1>
 
             <p
-              class="mt-4 md:mt-5 text-sm sm:text-base md:text-lg text-base-100/90 max-w-xl text-white"
+              class="mt-4 md:mt-5 text-sm sm:text-base md:text-lg max-w-xl text-white"
             >
               Our coaching brings together training, nutrition, and lifestyle so
               your plan matches your goals, schedule, and experience level –
