@@ -7,7 +7,7 @@
     >
       <div class="w-full bg-black/60">
         <div
-          class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20 flex flex-col md:flex-row gap-10 md:gap-16 items-center"
+          class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-34 md:py-20 flex flex-col md:flex-row gap-10 md:gap-16 items-center"
         >
           <!-- hero copy -->
           <div class="flex-1">
