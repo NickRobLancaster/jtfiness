@@ -18,7 +18,7 @@ import { SpeedInsights } from "@vercel/speed-insights/nuxt";
     <!-- slot to receive the page -->
     <slot />
 
-    <!-- footer -->
+    <PublicChat />
     <FooterSection />
   </div>
 </template>
