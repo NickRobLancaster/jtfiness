@@ -52,16 +52,9 @@ router.beforeEach((to, from, next) => {
 <style>
 /* Neon glow effect for the loading bar */
 .neon-blue {
-  background: linear-gradient(
-    90deg,
-    rgba(0, 128, 255, 0.871),
-    rgba(255, 0, 0, 0.871),
-    rgba(0, 255, 0, 0.871)
-  ); /* Gradient from blue to red to green */
-  box-shadow: 0 0 2px rgba(0, 128, 255, 0.871), 0 0 2px rgba(255, 0, 0, 0.871),
-    0 0 2px rgba(0, 255, 0, 0.871), 0 0 2px rgba(0, 128, 255, 0.871),
-    0 0 2px rgba(255, 0, 0, 0.871), 0 0 2px rgba(0, 255, 0, 0.871),
-    0 0 2px rgba(0, 128, 255, 0.871);
+  background: linear-gradient(90deg, rgba(0, 0, 0, 1), rgba(255, 0, 0, 0.95));
+  /* red glow with a subtle red halo */
+  box-shadow: 0 0 6px rgba(255, 0, 0, 0.9), 0 0 12px rgba(255, 0, 0, 0.25);
   height: 2px; /* Ensure the height is no larger than 2px */
 }
 </style>

@@ -44,6 +44,7 @@
     "@fortawesome/free-solid-svg-icons": "^6.6.0",
     "@nuxt/devtools": "^2.6.5",
     "@nuxt/icon": "^2.0.0",
+    "@nuxtjs/google-fonts": "^3.2.0",
     "@pinia/nuxt": "^0.11.2",
     "@tailwindcss/postcss": "^4.1.14",
     "@types/node": "^22.14.1",

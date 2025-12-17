@@ -92,10 +92,10 @@ export default {
   daisyui: {
     //whichever theme is first is applied to application
     themes: [
+      "synthwave",
       "dark",
       "forest",
       "nord",
-      "synthwave",
       "luxury",
       "emerald",
       "dark",
