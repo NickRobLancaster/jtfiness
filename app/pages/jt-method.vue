@@ -63,7 +63,9 @@
                 >
                   Real life first
                 </div>
-                <div class="stat-desc text-[0.7rem] sm:text-xs text-white">
+                <div
+                  class="stat-desc text-[0.7rem] sm:text-xs text-white whitespace-normal"
+                >
                   Plans that work with your schedule, not against it.
                 </div>
               </div>
@@ -79,7 +81,9 @@
                 >
                   Learn as you go
                 </div>
-                <div class="stat-desc text-[0.7rem] sm:text-xs text-white">
+                <div
+                  class="stat-desc text-[0.7rem] sm:text-xs text-white whitespace-normal"
+                >
                   So you can keep progressing long after coaching ends.
                 </div>
               </div>

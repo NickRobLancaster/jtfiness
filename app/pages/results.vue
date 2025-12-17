@@ -64,7 +64,9 @@
                 >
                   Whole-life wins
                 </div>
-                <div class="stat-desc text-[0.7rem] sm:text-xs text-white">
+                <div
+                  class="stat-desc text-[0.7rem] sm:text-xs text-white whitespace-normal"
+                >
                   Strength, energy, confidence, and a routine you can keep.
                 </div>
               </div>
@@ -80,7 +82,9 @@
                 >
                   1:1 attention
                 </div>
-                <div class="stat-desc text-[0.7rem] sm:text-xs text-white">
+                <div
+                  class="stat-desc text-[0.7rem] sm:text-xs text-white whitespace-normal"
+                >
                   Programs built around your schedule, history, and goals.
                 </div>
               </div>
