@@ -17,7 +17,7 @@ const websiteStore = useWebsiteStore();
       >
         <div
           v-if="websiteStore.showHamburgerMenu"
-          class="fixed top-0 left-0 w-screen h-screen bg-base-100 z-10"
+          class="fixed top-0 left-0 w-screen h-screen bg-black z-10"
         >
           <div class="relative h-full w-full p-10">
             <button

@@ -5,8 +5,8 @@ const websiteStore = useWebsiteStore();
 </script>
 
 <template>
-  <div class="sticky top-0 w-full z-50 bg-base-300">
-    <nav class="flex flex-row items-center flex-wrap bg-base-300 p-3 gap-5">
+  <div class="sticky top-0 w-full z-50">
+    <nav class="flex flex-row items-center flex-wrap bg-gray-900 p-3 gap-5">
       <!-- company logo -->
       <div class="hover:bg-gray-200 p-2 rounded">
         <nuxt-link to="/" class="">
