@@ -9,11 +9,11 @@ const websiteStore = useWebsiteStore();
     <Teleport to="#modals">
       <transition
         enter-active-class="transition-transform duration-100 ease-in-out"
-        enter-from-class="translate-x-full"
-        enter-to-class="translate-x-0"
+        enter-from-class="translate-y-full"
+        enter-to-class="translate-y-0"
         leave-active-class="transition-transform duration-100 ease-in-out"
-        leave-from-class="translate-x-0"
-        leave-to-class="translate-x-full"
+        leave-from-class="translate-y-0"
+        leave-to-class="translate-y-full"
       >
         <div
           v-if="websiteStore.showHamburgerMenu"
