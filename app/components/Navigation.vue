@@ -11,7 +11,8 @@ const websiteStore = useWebsiteStore();
       <div class="hover:bg-gray-200 p-2 rounded">
         <nuxt-link to="/" class="">
           <!-- <img src="/images/placeholder_logo.png" alt="logo" class="w-52" /> -->
-          <h1 class="text-2xl font-bold">JT Fitness</h1>
+
+          <CompanyLogo />
         </nuxt-link>
       </div>
 
