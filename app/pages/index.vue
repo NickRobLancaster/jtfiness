@@ -455,7 +455,7 @@
 </template>
 
 <script setup>
-const hero_image_url = "/images/dead_lift.jpg"; // replace with your asset path
+const hero_image_url = "/images/JT_Training.png"; // replace with your asset path
 
 const goal_cards = [
   {

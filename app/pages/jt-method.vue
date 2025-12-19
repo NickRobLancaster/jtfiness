@@ -332,7 +332,7 @@
 </template>
 
 <script setup>
-const hero_image_url = "/images/clean.jpg"; // swap if you have a dedicated Method hero
+const hero_image_url = "/images/JT_Training2.png"; // swap if you have a dedicated Method hero
 
 const method_steps = [
   {
